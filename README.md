@@ -37,13 +37,13 @@ The ETL scirpts are written and run on local WSL-Ubuntu. (Windows System for Lin
 + install and configure PySpark for connection to AWS => see details in install-PySpark.md
 + install pgAdmin then make connection to RDS Postgres. This allow us to monitor the evolution of the database after each Airflow DAG run
   
-# STEPS TO LAUNCH ETL
-Start local Spark cluster:
+# STEPS TO LAUNCH THE ETL
+1. Start local Spark cluster:
 Launch local Spark master
 ```bash
 ~/spark/spark-3.2.4-bin-hadoop3.2/sbin/start-master.sh
 ```
-By going on localhost:8081, we can get the URL of the master in the form spark://<computer-name>.:7077
+By going on localhost:8081, we can get the URL of the master in the form  ```spark://<computer-name>.:7077``` \
 Launch one worker associated with the master
 ```bash
 MASTER_URL="spark://<computer-name>.:7077"
@@ -52,6 +52,10 @@ MASTER_URL="spark://<computer-name>.:7077"
 We now have a local Spark cluster running with one worker, which is enough for our project, whose goal is to gain practise on building ETL pipeline with Spark.
 ![image](https://github.com/giangNguyen2007/F1-races-ETL-project/assets/146067036/489fe49c-a9e9-4a85-87bd-1c2ea23921c4)
 
-Launch Airflow
-Create Airflow connector to local spark cluster
+2. Launch Airflow
+```bash
+airflow standalone
+```
+Create Airflow connector to local spark cluster, using the Master_URL . This connection will be used by the DAG to submit the Spark script to the Spark cluster.
+
 
