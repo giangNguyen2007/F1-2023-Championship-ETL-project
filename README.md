@@ -15,11 +15,11 @@ Currently, the database have recorded the results of the first 10 races of the s
 
 ## 1.2 ETL scripts
 The ETL consist of two scripts:
-- Python Script: make request to RapiAPI endpoint to retrieve the lastet F1 race result,  in form of csv table, then save it into S3 folder
+- Python script: make request to RapiAPI endpoint to retrieve the lastet F1 race result,  in form of csv table, then save it into S3 folder
     + connection Python-AWS S3 : boto3
 - Pyspark script: retrieve the latest csv table from S3, make transformation and update the RDS database accordingly
     + connector Pyspark-AWS S3: AWS SDK library
-    + connection Python- AWS RDS : Postgres JDBC
+    + connection Pyspark-AWS RDS : Postgres JDBC
 
 
 
@@ -45,6 +45,7 @@ Launch local Spark master
 ```
 By going on localhost:8081, we can get the URL of the master in the form  ```spark://<computer-name>.:7077``` \
 Launch one worker associated with the master
+
 ```bash
 MASTER_URL="spark://<computer-name>.:7077"
 ~/spark/spark-3.2.4-bin-hadoop3.2/sbin/start-worker.sh ${URL}
