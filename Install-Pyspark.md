@@ -50,4 +50,4 @@ To access S3, Pyspark also needs AWS credentials associted with a AWS user. This
 export AWS_ACCESS_KEY_ID= <access key provided by AWS>
 export AWS_SECRET_ACCESS_KEY= <secret key provided by AWS>
 ```
-With all this set up, the pyspark script can be launched on local WSL, with access to both S3 and  RDS services.
+With all this set up, the local WSL is ready to launch a local Spark cluster to execute the ETL Pyspark script.
