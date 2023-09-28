@@ -7,7 +7,8 @@ Our database compiles data on race results, driver and team.
 
 After each race event, the ETL scripts will extract the race result from rapidAPI endpoint, transform and load into a database on AWS RDS, which update driver and team's ranking.   
 
-![Alt text](image-1.png)
+![image](https://github.com/giangNguyen2007/F1-races-ETL-project/assets/146067036/5dd268aa-91fa-4184-a151-cd80c852a16b)
+
 
 ## 1.1 Database model
 The database consists of 4 tables, linked in star schema:
@@ -86,7 +87,7 @@ airflow standalone
 The Airflow UI server can be accessed on localhost:8080, where all DAG status can be checked.
 Copy the 3 code files into the /dags folder. The DAG status and task graph can be checked on the Airflow UI.
 
-![Alt text](image-2.png)
+![image](https://github.com/giangNguyen2007/F1-races-ETL-project/assets/146067036/4ba7fa71-2655-436d-915b-b5697cd425e3)
 
 The DAG now is ready to be run as scheduled.
 
