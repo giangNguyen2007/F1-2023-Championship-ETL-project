@@ -7,8 +7,7 @@ Our database compiles data on race results, driver and team.
 
 After each race event, the ETL scripts will extract the race result from rapidAPI endpoint, transform and load into a database on AWS RDS, which update driver and team's ranking.   
 
-![image](https://github.com/giangNguyen2007/F1-races-ETL-project/assets/146067036/5dd268aa-91fa-4184-a151-cd80c852a16b)
-
+/mnt/c/Users/raira/airflow-docker/image-1.png
 
 ## 1.1 Database model
 The database consists of 4 tables, linked in star schema:
