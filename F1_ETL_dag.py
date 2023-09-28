@@ -56,7 +56,7 @@ with DAG(
 
     task2= BashOperator(
         task_id="spark_transform_load_rds",
-        bash_command='./spark-submit-script.sh japan 17 ',
+        bash_command='./spark-submit.sh japan 17 ',
     )
 
     task1>>task2
