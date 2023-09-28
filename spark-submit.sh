@@ -2,4 +2,4 @@
 
 {$SPARK_HOME}/bin/spark-submit \
   --master spark://DESKTOP-RRS69N2.:7077 \
-  /root/projects/gng-pyspark-1/gng-pyspark-forSubmission03.py --grand_prix=$1 --gp_index=$2
+  ./pySpark_transform_load_rds.py --grand_prix=$1 --gp_index=$2
